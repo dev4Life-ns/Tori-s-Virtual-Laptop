@@ -35,6 +35,10 @@ This application mimics the look and feel of a functioning onscreen keyboard. It
 
 ## :eyes: Preview
 
+<details>
+<summary>Application Screenshots</summary>
+
+
 *Highlighted and Before Reverse*
 
 <img width="1225" alt="Screen Shot 2023-03-30 at 9 02 07 PM" src="https://user-images.githubusercontent.com/81055110/229012875-5c052ac4-c99f-4687-a3a7-616fca3c8528.png">
@@ -48,4 +52,4 @@ This application mimics the look and feel of a functioning onscreen keyboard. It
 *All Caps*
 <img width="1225" alt="Screen Shot 2023-03-30 at 9 07 32 PM" src="https://user-images.githubusercontent.com/81055110/229012913-6c9aeaaf-448b-4691-a130-0508a681f365.png">
 
-
+</detaiis>
