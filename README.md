@@ -1,4 +1,4 @@
-# Tori's Virtual Laptop
+# Virtual Laptop
 
 ## :writing_hand:  Description 
 This application mimics the look and feel of a functioning onscreen keyboard. It is designed to be used with mouse clicks. As such it is not a complete replacement for a physical keyboard. But it does provide a means to enter text into the textarea  without the need for a physical keyboard. Apache Common Lang 3.12 version is the opensource library used to demonstrate these advance features.Using opensource libraries is a great way to minimize coding complexity and optimize code. 
