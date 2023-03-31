@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="347.0" styleClass="default-vbox" stylesheets="@../../../styles/calculator_styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onscreenkeyboards.CalculatorController">
+   <children>
+      <StackPane prefHeight="153.0" prefWidth="347.0">
+         <children>
+            <TextField fx:id="calcDisplay" alignment="BOTTOM_RIGHT" prefHeight="151.0" prefWidth="347.0" styleClass="default-display" stylesheets="@../../../styles/calculator_styles.css">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </TextField>
+            <Label fx:id="viewLabel" alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="347.0" textFill="#ffb3b3">
+               <font>
+                  <Font size="13.5" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="50.0" />
+               </StackPane.margin>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </Label>
+         </children>
+      </StackPane>
+      <HBox prefHeight="75.0" prefWidth="347.0" spacing="1.0">
+         <VBox.margin>
+            <Insets bottom="1.0" />
+         </VBox.margin>
+         <children>
+            <JFXButton onAction="#handleACButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="function-buttons" stylesheets="@../../../styles/calculator_styles.css" text="AC">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handlePlusMinus" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="function-buttons" stylesheets="@../../../styles/calculator_styles.css" text="+/-">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="function-buttons" stylesheets="@../../../styles/calculator_styles.css" text="\%">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-operation-buttons" stylesheets="@../../../styles/calculator_styles.css" text="/">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox prefHeight="75.0" prefWidth="347.0" spacing="1.0">
+         <children>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="7">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="8">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-operation-buttons" stylesheets="@../../../styles/calculator_styles.css" text="*">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox prefHeight="75.0" prefWidth="347.0" spacing="1.0">
+         <children>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="4">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="5">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="6">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-operation-buttons" stylesheets="@../../../styles/calculator_styles.css" text="+">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets top="1.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="75.0" prefWidth="347.0" spacing="1.0">
+         <children>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="1">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="2">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="3">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-operation-buttons" stylesheets="@../../../styles/calculator_styles.css" text="-">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets top="1.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="75.0" prefWidth="347.0" spacing="1.0">
+         <children>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="75.0" prefWidth="190.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text="0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculatorDisplay" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-numeric-buttons" stylesheets="@../../../styles/calculator_styles.css" text=".">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#handleCalculationButton" prefHeight="84.0" prefWidth="103.0" ripplerFill="#ff2200" styleClass="default-operation-buttons" stylesheets="@../../../styles/calculator_styles.css" text="=">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets top="1.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

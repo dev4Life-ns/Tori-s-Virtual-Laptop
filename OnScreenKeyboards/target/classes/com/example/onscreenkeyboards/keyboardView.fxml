@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="860.0" spacing="5.0" style="-fx-background-radius: 25px;" styleClass="keyboardVbox" stylesheets="@../../../styles/keyboard_style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onscreenkeyboards.VKeyboardController">
+   <children>
+      <TextArea fx:id="displayScreen" prefHeight="237.0" prefWidth="810.0" promptText="Start typing here....">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font size="14.5" />
+         </font>
+      </TextArea>
+      <Region prefHeight="7.0" prefWidth="810.0" />
+      <HBox prefHeight="46.0" prefWidth="791.0" spacing="5.0" styleClass="taskBar" stylesheets="@../../../styles/keyboard_style.css">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <JFXButton onAction="#handleESCFunction" prefHeight="41.0" prefWidth="77.0" stylesheets="@../../../styles/keyboard_style.css" text="esc" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></JFXButton>
+            <Label fx:id="actionStatusLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="578.0" text="                                    Welcome" textFill="#ffd87c">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <JFXButton fx:id="calculatorBtn" contentDisplay="GRAPHIC_ONLY" onAction="#handleLaunchCalculator" prefHeight="42.0" prefWidth="57.0" ripplerFill="#4e26ff" style="-fx-background-radius: none none none none;" stylesheets="@../../../styles/keyboard_style.css">
+               <graphic>
+                  <FontAwesomeIconView fill="#e1e1e1" glyphName="CALCULATOR" selectionFill="#ffc848" size="18">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="powerBtn1" contentDisplay="GRAPHIC_ONLY" onAction="#powerOffKeyboard" prefHeight="42.0" prefWidth="60.0" ripplerFill="#4e26ff" stylesheets="@../../../styles/keyboard_style.css">
+               <graphic>
+                  <FontAwesomeIconView fill="#e1e1e1" glyphName="POWER_OFF" selectionFill="#ffc326" size="20">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Region prefHeight="1.0" prefWidth="810.0" />
+      <HBox prefHeight="48.0" prefWidth="810.0" spacing="4.0">
+         <children>
+            <HBox fx:id="shiftedKeysHbox" spacing="4.0">
+               <children>
+                  <JFXButton fx:id="backtickBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="`" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="tildeIcon" fill="WHITE" glyphName="" text="~">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="oneBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="1" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="exclamationIcon" fill="WHITE" glyphName="" text="!">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="twoBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="2" textAlignment="CENTER" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="atIcon" fill="WHITE" glyphName="" text="\@">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="threeBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="3" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="hashtagIcon" fill="WHITE" glyphName="" text="#">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="fourBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="4" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="dollarIcon" fill="WHITE" glyphName="" text="\$">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="fiveBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="5" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="percentIcon" fill="WHITE" glyphName="" text="\%">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="sixBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="6" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="upIcon" fill="WHITE" glyphName="" text="^">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="sevenBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="7" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="ampersandIcon" fill="WHITE" glyphName="" text="&amp;">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="eightBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="8" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="asteriskIcon" fill="WHITE" glyphName="" text="*">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="nineBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="9" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="openbraceIcon" fill="WHITE" glyphName="" text="(">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="zeroBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="0" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="closebraceIcon" fill="WHITE" glyphName="" text=")">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="minusBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="-" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="underscoreIcon" fill="WHITE" glyphName="" text="_">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="equalBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="=" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="plusIcon" fill="WHITE" glyphName="" text="+">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton alignment="BOTTOM_RIGHT" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDeleteAction" prefWidth="110.0" ripplerFill="#4e26ff" styleClass="deleteKey" stylesheets="@../../../styles/keyboard_style.css" text="delete" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.4745098054409027" green="0.4745098054409027" blue="0.4745098054409027" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="810.0" spacing="4.0">
+         <children>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" contentDisplay="TOP" onAction="#handleTabFunction" prefWidth="95.0" ripplerFill="#4e26ff" styleClass="deleteKey" stylesheets="@../../../styles/keyboard_style.css" text="tab" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <HBox fx:id="row2Cchar_hbox" spacing="4.0">
+               <children>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="Q" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="W" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="E" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="R" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="T" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="Y" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="U" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="I" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="O" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="47.53" radius="24.002499999999998" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="P" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton fx:id="openBracketBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="[" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fx:id="opencurlybraceIcon" fill="WHITE" glyphName="" text="{">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="closeBracketBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="]" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fx:id="closecurlybraceIcon" fill="WHITE" glyphName="" text="}">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="backslashBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="\\" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fx:id="verticalBarIcon" fill="WHITE" glyphName="" text="|">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.4745098054409027" green="0.4745098054409027" blue="0.4745098054409027" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="810.0" spacing="4.0">
+         <children>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" contentDisplay="TOP" onAction="#handleCapsButton" prefWidth="95.0" ripplerFill="#4e26ff" styleClass="capsLockKey" stylesheets="@../../../styles/keyboard_style.css" text="caps lock" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <graphic>
+                  <Circle fx:id="indicator" fill="#dadada" radius="4.0" stroke="BLACK" strokeType="INSIDE" translateX="-17.0" translateY="-9.0" />
+               </graphic>
+            </JFXButton>
+            <HBox fx:id="row3charHbox" spacing="4.0">
+               <children>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="A" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="S" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="D" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="F" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="G" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="H" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="J" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="K" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="L" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton fx:id="semiColonBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text=";" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fx:id="colonIcon" fill="WHITE" glyphName="" text=":">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="singleQuoteBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="'" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fx:id="doubleQuoteIcon" fill="WHITE" glyphName="" text="&quot;">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_RIGHT" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="9.0" onAction="#handleEnterButton" prefWidth="98.0" ripplerFill="#4e26ff" styleClass="enterKey" stylesheets="@../../../styles/keyboard_style.css" text="return" textFill="WHITE">
+               <effect>
+                  <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="" text="enter">
+                     <font>
+                        <Font name="FontAwesome" size="12.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.4745098054409027" green="0.4745098054409027" blue="0.4745098054409027" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="810.0" spacing="4.0">
+         <children>
+            <JFXButton fx:id="shiftDownBtn" alignment="BOTTOM_LEFT" buttonType="RAISED" contentDisplay="TOP" onAction="#handleShiftButton" prefWidth="95.0" ripplerFill="#3008ff" styleClass="shiftKey" stylesheets="@../../../styles/keyboard_style.css" text="shift " textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="36.5325" spread="0.02" width="100.6" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <HBox fx:id="row4charHbox" spacing="4.0">
+               <children>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="Z" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="X" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="C" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="V" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="B" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="N" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="M" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox fx:id="shifted_row4_chars" spacing="4.0">
+               <children>
+                  <JFXButton fx:id="commaBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="," textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="lessIcon" fill="WHITE" glyphName="" text="&lt;">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="periodBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="." textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="greaterIcon" fill="WHITE" glyphName="" text="&gt;">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="forwardSlashBtn" buttonType="RAISED" contentDisplay="TOP" onAction="#handleDisplayScreen" ripplerFill="#4e26ff" styleClass="keys" stylesheets="@../../../styles/keyboard_style.css" text="/" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="44.58" radius="23.265" spread="0.02" width="50.48" />
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIconView fx:id="questionMarkIcon" fill="WHITE" glyphName="" text="?">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton alignment="BOTTOM_RIGHT" buttonType="RAISED" contentDisplay="TOP" onAction="#handleUnshiftButton" prefWidth="95.0" ripplerFill="#4717e8" styleClass="shiftKey" stylesheets="@../../../styles/keyboard_style.css" text="shift " textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="34.32" spread="0.02" width="91.75" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.4745098054409027" green="0.4745098054409027" blue="0.4745098054409027" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="810.0" spacing="4.0">
+         <children>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#abbreviateText" prefHeight="57.0" prefWidth="59.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" text="abbrev.." textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleCopyAndInsert" prefHeight="57.0" prefWidth="56.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" text="copy" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" onAction="#reverseSelectedText" prefHeight="57.0" prefWidth="62.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" text="reverse" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_RIGHT" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleSpacebar" prefHeight="57.0" prefWidth="401.0" ripplerFill="#5608ff" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" text="command" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#highlightText" prefHeight="57.0" prefWidth="69.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" text="highlight" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleLeftArrowButton" prefHeight="57.0" prefWidth="42.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CARET_LEFT" size="18">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+            <VBox prefHeight="48.0" prefWidth="62.0" spacing="2.0" stylesheets="@../../../styles/keyboard_style.css">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleUpArrowButton" prefHeight="11.0" prefWidth="69.0" ripplerFill="#4c12e3" styleClass="buttonColor" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+                     </effect>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CARET_UP" size="15">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleDownArrowButton" prefHeight="11.0" prefWidth="69.0" ripplerFill="#4c12e3" styleClass="buttonColor" textFill="WHITE">
+                     <effect>
+                        <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+                     </effect>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" size="15">
+                           <font>
+                              <Font name="FontAwesome" size="13.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleRightArrowButton" prefHeight="57.0" prefWidth="43.0" ripplerFill="#4c12e3" styleClass="specialBtn" stylesheets="@../../../styles/keyboard_style.css" textFill="WHITE">
+               <effect>
+                  <DropShadow height="47.53" radius="24.002499999999998" spread="0.03" width="50.48" />
+               </effect>
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CARET_RIGHT" size="18">
+                     <font>
+                        <Font name="FontAwesome" size="13.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.4745098054409027" green="0.4745098054409027" blue="0.4745098054409027" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <padding>
+      <Insets left="25.0" right="25.0" />
+   </padding>
+</VBox>
