@@ -35,7 +35,7 @@ This application mimics the look and feel of a functioning onscreen keyboard. It
 
 ## :eyes: Preview
 
-*Highlighted and Before Reverse Image*
+*Highlighted and Before Reverse*
 
 <img width="1225" alt="Screen Shot 2023-03-30 at 9 02 07 PM" src="https://user-images.githubusercontent.com/81055110/229012875-5c052ac4-c99f-4687-a3a7-616fca3c8528.png">
 
