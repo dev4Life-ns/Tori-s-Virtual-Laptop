@@ -23,7 +23,7 @@ This application mimics the look and feel of a functioning onscreen keyboard. It
 
 
 ## :stars: Features
-- Reverse single word or verse sentences by highlighting the text and pressing the "reverse key". Verse
+- Reverse single word or reverse sentences by highlighting the text and pressing the "reverse key". Reverse
   previous actions by pressing the "reverse key" again.
 - Abbreviate single word by highlighting the text and pressing the "abbreviate key".
 - Copy text to another area within the textarea by simply pressing the "copy key" with desired text highlighted.
